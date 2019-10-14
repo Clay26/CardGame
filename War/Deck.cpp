@@ -14,8 +14,17 @@
 namespace War {
 
 Deck::Deck() {
+    numberOfCards = 52;
 }
 
 Deck::~Deck() {
+}
+
+int Deck::getNumberOfCards() {
+    return numberOfCards;
+}
+void Deck::setNumberOfCards(int numCards) {
+    numberOfCards = numCards;
+    return;
 }
 }

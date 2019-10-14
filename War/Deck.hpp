@@ -22,9 +22,12 @@ class Deck {
 public:
     Deck();
     ~Deck();
+    int getNumberOfCards();
+    void setNumberOfCards(int numCards);
 
 private:
     std::vector<War::PlayingCard> hand;
+    int numberOfCards;
 };
 }
 #endif /* Deck_hpp */

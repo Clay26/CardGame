@@ -72,9 +72,9 @@
 			children = (
 				C85DF08523540C210049FD58 /* main.cpp */,
 				C85DF08C23540E8E0049FD58 /* PlayingCard.cpp */,
+				C85DF08D23540E8E0049FD58 /* PlayingCard.hpp */,
 				C85DF08F235418680049FD58 /* Deck.cpp */,
 				C85DF090235418680049FD58 /* Deck.hpp */,
-				C85DF08D23540E8E0049FD58 /* PlayingCard.hpp */,
 				C85DF09223541D650049FD58 /* Suits.hpp */,
 				C85DF0942354DFE50049FD58 /* Suits.cpp */,
 				C85DF09623551C3C0049FD58 /* Ranks.cpp */,
