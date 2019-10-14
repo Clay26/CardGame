@@ -18,11 +18,11 @@ enum class Suits {
 //    H = 'H',
 //    S = 'S',
 //    B = ' '
-    C,
-    D,
-    H,
-    S,
-    B
+    Clubs,
+    Diamonds,
+    Hearts,
+    Spades,
+    Blank
 };
 
 char ConvertSuitsToChar(Suits suit);

@@ -12,6 +12,7 @@
 		C85DF091235418680049FD58 /* Deck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C85DF08F235418680049FD58 /* Deck.cpp */; };
 		C85DF09323541D650049FD58 /* Suits.hpp in Sources */ = {isa = PBXBuildFile; fileRef = C85DF09223541D650049FD58 /* Suits.hpp */; };
 		C85DF0952354DFE50049FD58 /* Suits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C85DF0942354DFE50049FD58 /* Suits.cpp */; };
+		C85DF09823551C3C0049FD58 /* Ranks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C85DF09623551C3C0049FD58 /* Ranks.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,8 @@
 		C85DF090235418680049FD58 /* Deck.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Deck.hpp; sourceTree = "<group>"; };
 		C85DF09223541D650049FD58 /* Suits.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = Suits.hpp; sourceTree = "<group>"; };
 		C85DF0942354DFE50049FD58 /* Suits.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Suits.cpp; sourceTree = "<group>"; };
+		C85DF09623551C3C0049FD58 /* Ranks.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Ranks.cpp; sourceTree = "<group>"; };
+		C85DF09723551C3C0049FD58 /* Ranks.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Ranks.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 				C85DF08D23540E8E0049FD58 /* PlayingCard.hpp */,
 				C85DF09223541D650049FD58 /* Suits.hpp */,
 				C85DF0942354DFE50049FD58 /* Suits.cpp */,
+				C85DF09623551C3C0049FD58 /* Ranks.cpp */,
+				C85DF09723551C3C0049FD58 /* Ranks.hpp */,
 				C85DF08323540C210049FD58 /* Products */,
 			);
 			path = War;
@@ -141,6 +146,7 @@
 				C85DF09323541D650049FD58 /* Suits.hpp in Sources */,
 				C85DF08623540C210049FD58 /* main.cpp in Sources */,
 				C85DF0952354DFE50049FD58 /* Suits.cpp in Sources */,
+				C85DF09823551C3C0049FD58 /* Ranks.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

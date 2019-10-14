@@ -13,6 +13,7 @@
 #include <stdio.h>
 
 // War
+#include "Ranks.hpp"
 #include "Suits.hpp"
 
 namespace War {
@@ -22,13 +23,13 @@ public:
     PlayingCard();
     ~PlayingCard();
     char getSuit();
-    char getRank();
+    int getRank();
     void setSuit(char newSuit);
-    void setRank(char newRank);
+    void setRank(int newRank);
     
 private:
     Suits suit;
-    char rank;
+    Ranks rank;
 };
 }
 #endif /* PlayingCard_hpp */

@@ -15,19 +15,19 @@
 namespace War {
 
 char ConvertSuitsToChar(Suits suit) {
-    if (suit == Suits::C) {
+    if (suit == Suits::Clubs) {
         return 'C';
     }
-    else if (suit == Suits::D) {
+    else if (suit == Suits::Diamonds) {
         return 'D';
     }
-    else if (suit == Suits::H) {
+    else if (suit == Suits::Hearts) {
         return 'H';
     }
-    else if (suit == Suits::S) {
+    else if (suit == Suits::Spades) {
         return 'S';
     }
-    else if (suit == Suits::B) {
+    else if (suit == Suits::Blank) {
         return ' ';
     }
     else {
@@ -39,24 +39,24 @@ char ConvertSuitsToChar(Suits suit) {
 
 Suits ConvertCharToSuits(char charSuit) {
     if (charSuit == 'C') {
-        return Suits::C;
+        return Suits::Clubs;
     }
     else if (charSuit == 'D') {
-        return Suits::D;
+        return Suits::Diamonds;
     }
     else if (charSuit == 'H') {
-        return Suits::H;
+        return Suits::Hearts;
     }
     else if (charSuit == 'S') {
-        return Suits::S;
+        return Suits::Spades;
     }
     else if (charSuit == ' ') {
-        return Suits::B;
+        return Suits::Blank;
     }
     else {
         std::cout << "Invalid Suit" << std::endl;
 //        exit(2);
-        return Suits::B;
+        return Suits::Blank;
     }
 }
 }

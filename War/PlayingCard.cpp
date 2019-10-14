@@ -14,24 +14,23 @@
 
 namespace War {
 PlayingCard::PlayingCard() {
-    suit = Suits::B;
-    rank = ' ';
+    suit = Suits::Blank;
+    rank = Ranks::Two;
 }
 
 PlayingCard::~PlayingCard() {
-    std::cout << "Goodbye" << std::endl;
 }
 
 char PlayingCard::getSuit() {
     return ConvertSuitsToChar(suit);
 }
 
-char PlayingCard::getRank() {
-    return rank;
+int PlayingCard::getRank() {
+    return ConvertRanksToInt(rank);
 }
 
-void PlayingCard::setRank(char newRank) {
-    rank = newRank;
+void PlayingCard::setRank(int newRank) {
+    rank = ConvertIntToRanks(newRank);
     return;
 }
 

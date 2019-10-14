@@ -14,11 +14,8 @@
 namespace War {
 
 Deck::Deck() {
-    
 }
 
 Deck::~Deck() {
-    std::cout << "Goodbye" << std::endl;
 }
-
 }
