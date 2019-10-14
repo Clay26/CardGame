@@ -6,10 +6,16 @@
 //  Copyright © 2019 Clay Jackson. All rights reserved.
 //
 
+// System
 #include <iostream>
+
+// War
+#include "PlayingCard.hpp"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
+    War::PlayingCard cardTest;
+    cardTest.suit = 'D';
     return 0;
 }

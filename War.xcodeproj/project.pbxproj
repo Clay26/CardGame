@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C85DF08623540C210049FD58 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C85DF08523540C210049FD58 /* main.cpp */; };
+		C85DF08E23540E8E0049FD58 /* PlayingCard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C85DF08C23540E8E0049FD58 /* PlayingCard.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		C85DF08223540C210049FD58 /* War */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = War; sourceTree = BUILT_PRODUCTS_DIR; };
 		C85DF08523540C210049FD58 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C85DF08C23540E8E0049FD58 /* PlayingCard.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PlayingCard.cpp; sourceTree = "<group>"; };
+		C85DF08D23540E8E0049FD58 /* PlayingCard.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PlayingCard.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				C85DF08523540C210049FD58 /* main.cpp */,
+				C85DF08C23540E8E0049FD58 /* PlayingCard.cpp */,
+				C85DF08D23540E8E0049FD58 /* PlayingCard.hpp */,
 			);
 			path = War;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C85DF08E23540E8E0049FD58 /* PlayingCard.cpp in Sources */,
 				C85DF08623540C210049FD58 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
