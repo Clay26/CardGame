@@ -21,4 +21,22 @@ PlayingCard::PlayingCard() {
 PlayingCard::~PlayingCard() {
     std::cout << "Goodbye" << std::endl;
 }
+
+char PlayingCard::getSuit() {
+    return suit;
+}
+
+char PlayingCard::getRank() {
+    return rank;
+}
+
+void PlayingCard::setRank(char newRank) {
+    rank = newRank;
+    return;
+}
+
+void PlayingCard::setSuit(char newSuit) {
+    suit = newSuit;
+    return;
+}
 }

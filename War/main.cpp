@@ -16,6 +16,5 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
     War::PlayingCard cardTest;
-    cardTest.suit = 'D';
     return 0;
 }

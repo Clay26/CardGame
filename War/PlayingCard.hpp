@@ -13,9 +13,16 @@
 
 namespace War {
 class PlayingCard {
+
 public:
     PlayingCard();
     ~PlayingCard();
+    char getSuit();
+    char getRank();
+    void setSuit(char newSuit);
+    void setRank(char newRank);
+    
+private:
     char suit;
     char rank;
 };
