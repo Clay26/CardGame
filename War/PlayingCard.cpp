@@ -14,7 +14,7 @@
 
 namespace War {
 PlayingCard::PlayingCard() {
-    suit = ' ';
+    suit = Suits::B;
     rank = ' ';
 }
 
@@ -23,7 +23,7 @@ PlayingCard::~PlayingCard() {
 }
 
 char PlayingCard::getSuit() {
-    return suit;
+    return ConvertSuitsToChar(suit);
 }
 
 char PlayingCard::getRank() {
@@ -36,7 +36,7 @@ void PlayingCard::setRank(char newRank) {
 }
 
 void PlayingCard::setSuit(char newSuit) {
-    suit = newSuit;
+    suit = ConvertCharToSuits(newSuit);
     return;
 }
 }

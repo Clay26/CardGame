@@ -9,7 +9,11 @@
 #ifndef PlayingCard_hpp
 #define PlayingCard_hpp
 
+// System
 #include <stdio.h>
+
+// War
+#include "Suits.hpp"
 
 namespace War {
 class PlayingCard {
@@ -23,7 +27,7 @@ public:
     void setRank(char newRank);
     
 private:
-    char suit;
+    Suits suit;
     char rank;
 };
 }

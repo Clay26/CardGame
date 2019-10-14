@@ -16,5 +16,11 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
     War::Deck hand;
+    War::PlayingCard testCard;
+    std::cout << "TestCard Suit: " << testCard.getSuit() << std::endl;
+    testCard.setSuit('H');
+    std::cout << "TestCard Suit: " << testCard.getSuit() << std::endl;
+    testCard.setSuit('P');
+    std::cout << "TestCard Suit: " << testCard.getSuit() << std::endl;
     return 0;
 }
