@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C85DF08623540C210049FD58 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C85DF08523540C210049FD58 /* main.cpp */; };
 		C85DF08E23540E8E0049FD58 /* PlayingCard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C85DF08C23540E8E0049FD58 /* PlayingCard.cpp */; };
+		C85DF091235418680049FD58 /* Deck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C85DF08F235418680049FD58 /* Deck.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		C85DF08523540C210049FD58 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C85DF08C23540E8E0049FD58 /* PlayingCard.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PlayingCard.cpp; sourceTree = "<group>"; };
 		C85DF08D23540E8E0049FD58 /* PlayingCard.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PlayingCard.hpp; sourceTree = "<group>"; };
+		C85DF08F235418680049FD58 /* Deck.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Deck.cpp; sourceTree = "<group>"; };
+		C85DF090235418680049FD58 /* Deck.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Deck.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +48,6 @@
 			isa = PBXGroup;
 			children = (
 				C85DF08423540C210049FD58 /* War */,
-				C85DF08323540C210049FD58 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +57,7 @@
 				C85DF08223540C210049FD58 /* War */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		C85DF08423540C210049FD58 /* War */ = {
@@ -62,7 +65,10 @@
 			children = (
 				C85DF08523540C210049FD58 /* main.cpp */,
 				C85DF08C23540E8E0049FD58 /* PlayingCard.cpp */,
+				C85DF08F235418680049FD58 /* Deck.cpp */,
+				C85DF090235418680049FD58 /* Deck.hpp */,
 				C85DF08D23540E8E0049FD58 /* PlayingCard.hpp */,
+				C85DF08323540C210049FD58 /* Products */,
 			);
 			path = War;
 			sourceTree = "<group>";
@@ -124,6 +130,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C85DF091235418680049FD58 /* Deck.cpp in Sources */,
 				C85DF08E23540E8E0049FD58 /* PlayingCard.cpp in Sources */,
 				C85DF08623540C210049FD58 /* main.cpp in Sources */,
 			);
