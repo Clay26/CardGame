@@ -33,5 +33,10 @@ enum class Ranks {
 int ConvertRanksToInt(Ranks rank);
 
 Ranks ConvertIntToRanks(int intRank);
+
+void PrintRank(Ranks rank);
+
+void PrintRank(int intRank);
+
 }
 #endif /* Ranks_hpp */

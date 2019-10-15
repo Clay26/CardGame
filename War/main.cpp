@@ -15,7 +15,9 @@
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
-    War::Deck hand;
-    War::PlayingCard testCard;
+    War::PlayingCard card;
+    card.setSuit('C');
+    War::Deck hand(15);
+    hand.PrintHand();
     return 0;
 }

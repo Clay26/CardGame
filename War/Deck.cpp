@@ -14,10 +14,43 @@
 namespace War {
 
 Deck::Deck() {
-    numberOfCards = 52;
+    numberOfCards = 3;
+    
+    for (int i = 0; i < numberOfCards; ++i) {
+        PlayingCard tempCard;
+        tempCard.setRank((i + 2) % 15);
+        tempCard.setSuit(i % 4);
+        hand.push_back(tempCard);
+    }
+}
+
+Deck::Deck(int numOfCards) {
+    numberOfCards = numOfCards;
+    
+    for (int i = 0; i < numberOfCards; ++i) {
+        PlayingCard tempCard;
+        tempCard.setRank((i + 2) % 13);
+        tempCard.setSuit(i % 4);
+        hand.push_back(tempCard);
+    }
 }
 
 Deck::~Deck() {
+}
+
+void Deck::PrintHand() {
+    for (int i = 0; i < numberOfCards; ++i) {
+        PrintRank(hand[i].getRank());
+        PrintSuit(hand[i].getSuit());
+        if (i < numberOfCards - 1) {
+            std::cout << ", ";
+        }
+        else {
+            std::cout << std::endl;
+        }
+    }
+    
+    return;
 }
 
 int Deck::getNumberOfCards() {

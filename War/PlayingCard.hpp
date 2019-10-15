@@ -22,10 +22,11 @@ class PlayingCard {
 public:
     PlayingCard();
     ~PlayingCard();
-    char getSuit();
     int getRank();
-    void setSuit(char newSuit);
+    char getSuit();
     void setRank(int newRank);
+    void setSuit(char newSuit);
+    void setSuit(int newSuit);
     
 private:
     Suits suit;

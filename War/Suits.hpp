@@ -28,5 +28,12 @@ enum class Suits {
 char ConvertSuitsToChar(Suits suit);
 
 Suits ConvertCharToSuits(char charSuit);
+
+Suits ConvertIntToSuits(int intSuit);
+
+void PrintSuit(Suits suit);
+
+void PrintSuit(char charSuit);
+
 }
 #endif /* Suits_hpp */

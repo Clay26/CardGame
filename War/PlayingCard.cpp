@@ -21,12 +21,12 @@ PlayingCard::PlayingCard() {
 PlayingCard::~PlayingCard() {
 }
 
-char PlayingCard::getSuit() {
-    return ConvertSuitsToChar(suit);
-}
-
 int PlayingCard::getRank() {
     return ConvertRanksToInt(rank);
+}
+
+char PlayingCard::getSuit() {
+    return ConvertSuitsToChar(suit);
 }
 
 void PlayingCard::setRank(int newRank) {
@@ -36,6 +36,11 @@ void PlayingCard::setRank(int newRank) {
 
 void PlayingCard::setSuit(char newSuit) {
     suit = ConvertCharToSuits(newSuit);
+    return;
+}
+
+void PlayingCard::setSuit(int newSuit) {
+    suit = ConvertIntToSuits(newSuit);
     return;
 }
 }

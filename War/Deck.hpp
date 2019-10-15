@@ -21,7 +21,9 @@ namespace War {
 class Deck {
 public:
     Deck();
+    Deck(int numOfCards);
     ~Deck();
+    void PrintHand();
     int getNumberOfCards();
     void setNumberOfCards(int numCards);
 

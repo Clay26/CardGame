@@ -105,4 +105,90 @@ Ranks ConvertIntToRanks(int intRank) {
         return Ranks::Two;
     }
 }
+
+void PrintRank(Ranks rank) {
+    if (rank == Ranks::Two) {
+        std::cout << "2";
+    }
+    else if (rank == Ranks::Three) {
+        std::cout << "3";
+    }
+    else if (rank == Ranks::Four) {
+        std::cout << "4";
+    }
+    else if (rank == Ranks::Five) {
+        std::cout << "5";
+    }
+    else if (rank == Ranks::Six) {
+        std::cout << "6";
+    }
+    else if (rank == Ranks::Seven) {
+        std::cout << "7";
+    }
+    else if (rank == Ranks::Eight) {
+        std::cout << "8";
+    }
+    else if (rank == Ranks::Nine) {
+        std::cout << "9";
+    }
+    else if (rank == Ranks::Ten) {
+        std::cout << "10";
+    }
+    else if (rank == Ranks::Jack) {
+        std::cout << "J";
+    }
+    else if (rank == Ranks::Queen) {
+        std::cout << "Q";
+    }
+    else if (rank == Ranks::King) {
+        std::cout << "K";
+    }
+    else if (rank == Ranks::Ace) {
+        std::cout << "A";
+    }
+    return;
+}
+
+void PrintRank(int intRank) {
+    if (intRank == 2) {
+        std::cout << "2";
+    }
+    else if (intRank == 3) {
+        std::cout << "3";
+    }
+    else if (intRank == 4) {
+        std::cout << "4";
+    }
+    else if (intRank == 5) {
+        std::cout << "5";
+    }
+    else if (intRank == 6) {
+        std::cout << "6";
+    }
+    else if (intRank == 7) {
+        std::cout << "7";
+    }
+    else if (intRank == 8) {
+        std::cout << "8";
+    }
+    else if (intRank == 9) {
+        std::cout << "9";
+    }
+    else if (intRank == 10) {
+        std::cout << "10";
+    }
+    else if (intRank == 11) {
+        std::cout << "J";
+    }
+    else if (intRank == 12) {
+        std::cout << "Q";
+    }
+    else if (intRank == 13) {
+        std::cout << "K";
+    }
+    else if (intRank == 14) {
+        std::cout << "A";
+    }
+    return;
+}
 }
