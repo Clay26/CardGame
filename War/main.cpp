@@ -19,5 +19,7 @@ int main(int argc, const char * argv[]) {
     card.setSuit('C');
     War::Deck hand(52);
     hand.PrintHand();
+    hand.Shuffle();
+    hand.PrintHand();
     return 0;
 }

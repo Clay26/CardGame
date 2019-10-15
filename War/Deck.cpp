@@ -7,6 +7,7 @@
 //
 
 // System
+#include <cstdlib>
 #include <iostream>
 
 #include "Deck.hpp"
@@ -62,6 +63,20 @@ void Deck::PrintHand() {
         }
     }
     
+    return;
+}
+
+void Deck::Shuffle() {
+    std::vector<War::PlayingCard> shuffledDeck;
+    
+    for (int i = 0; i < numberOfCards; ++i) {
+        int randomCardPos = rand() % hand.size();
+        shuffledDeck.push_back(hand[randomCardPos]);
+        std::vector<War::PlayingCard>::iterator pos = hand.begin() + randomCardPos;
+        hand.erase(pos);
+    }
+    
+    hand = shuffledDeck;
     return;
 }
 

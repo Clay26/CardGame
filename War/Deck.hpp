@@ -24,6 +24,7 @@ public:
     Deck(int numOfCards);
     ~Deck();
     void PrintHand();
+    void Shuffle();
     int getNumberOfCards();
     void setNumberOfCards(int numCards);
 
