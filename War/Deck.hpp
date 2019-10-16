@@ -31,6 +31,7 @@ public:
 private:
     std::vector<War::PlayingCard> hand;
     int numberOfCards;
+    void GenerateHand();
 };
 }
 #endif /* Deck_hpp */

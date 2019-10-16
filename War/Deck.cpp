@@ -16,39 +16,33 @@ namespace War {
 
 Deck::Deck() {
     numberOfCards = 3;
-    
-    int suitCount = -1;
-    for (int i = 0; i < numberOfCards; ++i) {
-        PlayingCard tempCard;
-        int rankCount = (i + 2) % 15;
-        if (rankCount == 2) {
-            suitCount++;
-        }
-        
-        tempCard.setRank(rankCount);
-        tempCard.setSuit(suitCount);
-        hand.push_back(tempCard);
-    }
+    GenerateHand();
 }
 
 Deck::Deck(int numOfCards) {
     numberOfCards = numOfCards;
-    
+    GenerateHand();
+}
+
+Deck::~Deck() {
+}
+
+void Deck::GenerateHand() {
     int suitCount = -1;
     for (int i = 0; i < numberOfCards; ++i) {
         PlayingCard tempCard;
         int rankCount = (i % 13) + 2;
         if (rankCount == 2) {
             suitCount++;
+            suitCount %= 4;
         }
         
         tempCard.setRank(rankCount);
         tempCard.setSuit(suitCount);
         hand.push_back(tempCard);
     }
-}
-
-Deck::~Deck() {
+    
+    return;
 }
 
 void Deck::PrintHand() {
