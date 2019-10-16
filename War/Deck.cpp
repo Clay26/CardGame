@@ -33,10 +33,10 @@ void Deck::Deal(Deck &deckOne, Deck &deckTwo) {
     
     for (int i = 0; i < numberOfCards; i++) {
         if (i % 2 == 0) {
-            handOne.push_back(hand[i]);
+            handOne.insert(handOne.begin(),hand[i]);
         }
         else {
-            handTwo.push_back(hand[i]);
+            handTwo.insert(handTwo.begin(),hand[i]);
         }
     }
     
