@@ -25,7 +25,7 @@ int main(int argc, const char * argv[]) {
     handOne.PrintHand();
     CardGame::Deck handTwo(0);
     handTwo.PrintHand();
-    hand.Deal(handOne, handTwo);
+    hand.Deal(handOne, handTwo, 2);
     hand.PrintHand();
     handOne.PrintHand();
     handTwo.PrintHand();

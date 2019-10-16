@@ -23,7 +23,8 @@ public:
     Deck();
     Deck(int numOfCards);
     ~Deck();
-    void Deal(Deck &handOne, Deck &handTwo);
+    void Deal(Deck &deckOne, Deck &deckTwo, int numCardsToDeal);
+    void Deal(Deck &deckOne, Deck &deckTwo);
     void PrintHand();
     void Shuffle();
     std::vector<CardGame::PlayingCard> getHand();

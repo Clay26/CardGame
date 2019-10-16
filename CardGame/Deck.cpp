@@ -27,11 +27,11 @@ Deck::Deck(int numOfCards) {
 Deck::~Deck() {
 }
 
-void Deck::Deal(Deck &deckOne, Deck &deckTwo) {
+void Deck::Deal(Deck &deckOne, Deck &deckTwo, int numCardsToDeal) {
     std::vector<CardGame::PlayingCard> handOne;
     std::vector<CardGame::PlayingCard> handTwo;
     
-    for (int i = 0; i < numberOfCards; i++) {
+    for (int i = 0; i < numCardsToDeal * 2; i++) {
         if (i % 2 == 0) {
             handOne.insert(handOne.begin(),hand[i]);
         }
@@ -41,9 +41,22 @@ void Deck::Deal(Deck &deckOne, Deck &deckTwo) {
     }
     
     deckOne.setHand(handOne);
-    deckTwo.setHand(handTwo);    
-    hand.clear();
-    numberOfCards = (int)hand.size();
+    deckTwo.setHand(handTwo);
+    
+    if (numCardsToDeal * 2 < numberOfCards) {
+        hand.erase(hand.begin(), hand.begin() + numCardsToDeal * 2);
+        numberOfCards = (int)hand.size();
+    }
+    else {
+        hand.clear();
+        numberOfCards = (int)hand.size();
+    }
+    
+    return;
+}
+
+void Deck::Deal(Deck &deckOne, Deck &deckTwo) {
+    Deal(deckOne, deckTwo, numberOfCards / 2);
     
     return;
 }
