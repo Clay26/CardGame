@@ -95,6 +95,10 @@ void Deck::Shuffle() {
     return;
 }
 
+std::vector<CardGame::PlayingCard> Deck::getHand() {
+    return hand;
+}
+
 int Deck::getNumberOfCards() {
     return numberOfCards;
 }

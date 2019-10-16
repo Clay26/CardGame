@@ -26,6 +26,7 @@ public:
     void Deal(Deck &handOne, Deck &handTwo);
     void PrintHand();
     void Shuffle();
+    std::vector<CardGame::PlayingCard> getHand();
     int getNumberOfCards();
     void setHand(std::vector<CardGame::PlayingCard> newHand);
     void setNumberOfCards(int numCards);
