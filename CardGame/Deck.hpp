@@ -16,7 +16,7 @@
 // War
 #include "PlayingCard.hpp"
 
-namespace War {
+namespace CardGame {
 
 class Deck {
 public:
@@ -27,11 +27,11 @@ public:
     void PrintHand();
     void Shuffle();
     int getNumberOfCards();
-    void setHand(std::vector<War::PlayingCard> newHand);
+    void setHand(std::vector<CardGame::PlayingCard> newHand);
     void setNumberOfCards(int numCards);
 
 private:
-    std::vector<War::PlayingCard> hand;
+    std::vector<CardGame::PlayingCard> hand;
     int numberOfCards;
     void GenerateHand();
 };

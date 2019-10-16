@@ -12,7 +12,7 @@
 // War
 #include "PlayingCard.hpp"
 
-namespace War {
+namespace CardGame {
 PlayingCard::PlayingCard() {
     suit = Suits::Blank;
     rank = Ranks::Two;

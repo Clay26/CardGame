@@ -12,7 +12,7 @@
 // War
 #include "Suits.hpp"
 
-namespace War {
+namespace CardGame {
 
 char ConvertSuitsToChar(Suits suit) {
     if (suit == Suits::Clubs) {
@@ -61,7 +61,6 @@ Suits ConvertCharToSuits(char charSuit) {
 }
 
 Suits ConvertIntToSuits(int intSuit) {
-    char charSuit = ' ';
     if (intSuit == 0) {
         return Suits::Clubs;
     }

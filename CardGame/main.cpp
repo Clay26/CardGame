@@ -15,15 +15,15 @@
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
-    War::PlayingCard card;
+    CardGame::PlayingCard card;
     card.setSuit('C');
-    War::Deck hand(15);
+    CardGame::Deck hand(15);
     hand.PrintHand();
     hand.Shuffle();
     hand.PrintHand();
-    War::Deck handOne(0);
+    CardGame::Deck handOne(0);
     handOne.PrintHand();
-    War::Deck handTwo(0);
+    CardGame::Deck handTwo(0);
     handTwo.PrintHand();
     hand.Deal(handOne, handTwo);
     hand.PrintHand();

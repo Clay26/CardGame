@@ -12,7 +12,7 @@
 // War
 #include "Ranks.hpp"
 
-namespace War {
+namespace CardGame {
 
 int ConvertRanksToInt(Ranks rank) {
     if (rank == Ranks::Two) {

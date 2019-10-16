@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 
-namespace War {
+namespace CardGame {
 enum class Suits {
 //    C = 'C',
 //    D = 'D',

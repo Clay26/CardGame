@@ -16,7 +16,7 @@
 #include "Ranks.hpp"
 #include "Suits.hpp"
 
-namespace War {
+namespace CardGame {
 class PlayingCard {
 
 public:

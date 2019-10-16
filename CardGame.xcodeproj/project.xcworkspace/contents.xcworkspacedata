@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:War.xcodeproj">
+      location = "self:/Users/clayjackson/XCode/War/CardGame.xcodeproj">
    </FileRef>
 </Workspace>

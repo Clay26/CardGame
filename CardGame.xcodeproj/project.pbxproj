@@ -54,7 +54,7 @@
 		C85DF07923540C210049FD58 = {
 			isa = PBXGroup;
 			children = (
-				C85DF08423540C210049FD58 /* War */,
+				C85DF08423540C210049FD58 /* CardGame */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,7 +67,7 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		C85DF08423540C210049FD58 /* War */ = {
+		C85DF08423540C210049FD58 /* CardGame */ = {
 			isa = PBXGroup;
 			children = (
 				C85DF08523540C210049FD58 /* main.cpp */,
@@ -81,7 +81,7 @@
 				C85DF09723551C3C0049FD58 /* Ranks.hpp */,
 				C85DF08323540C210049FD58 /* Products */,
 			);
-			path = War;
+			path = CardGame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +118,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C85DF07D23540C210049FD58 /* Build configuration list for PBXProject "War" */;
+			buildConfigurationList = C85DF07D23540C210049FD58 /* Build configuration list for PBXProject "CardGame" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -285,7 +285,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C85DF07D23540C210049FD58 /* Build configuration list for PBXProject "War" */ = {
+		C85DF07D23540C210049FD58 /* Build configuration list for PBXProject "CardGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C85DF08723540C210049FD58 /* Debug */,

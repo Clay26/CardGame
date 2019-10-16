@@ -12,7 +12,7 @@
 // System
 #include <iostream>
 
-namespace War {
+namespace CardGame {
 
 enum class Ranks {
     Two,

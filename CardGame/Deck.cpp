@@ -12,7 +12,7 @@
 
 #include "Deck.hpp"
 
-namespace War {
+namespace CardGame {
 
 Deck::Deck() {
     numberOfCards = 3;
@@ -28,8 +28,8 @@ Deck::~Deck() {
 }
 
 void Deck::Deal(Deck &deckOne, Deck &deckTwo) {
-    std::vector<War::PlayingCard> handOne;
-    std::vector<War::PlayingCard> handTwo;
+    std::vector<CardGame::PlayingCard> handOne;
+    std::vector<CardGame::PlayingCard> handTwo;
     
     for (int i = 0; i < numberOfCards; i++) {
         if (i % 2 == 0) {
@@ -82,12 +82,12 @@ void Deck::PrintHand() {
 }
 
 void Deck::Shuffle() {
-    std::vector<War::PlayingCard> shuffledDeck;
+    std::vector<CardGame::PlayingCard> shuffledDeck;
     
     for (int i = 0; i < numberOfCards; ++i) {
         int randomCardPos = rand() % hand.size();
         shuffledDeck.push_back(hand[randomCardPos]);
-        std::vector<War::PlayingCard>::iterator pos = hand.begin() + randomCardPos;
+        std::vector<CardGame::PlayingCard>::iterator pos = hand.begin() + randomCardPos;
         hand.erase(pos);
     }
     
@@ -99,7 +99,7 @@ int Deck::getNumberOfCards() {
     return numberOfCards;
 }
 
-void Deck::setHand(std::vector<War::PlayingCard> newHand) {
+void Deck::setHand(std::vector<CardGame::PlayingCard> newHand) {
     hand = newHand;
     numberOfCards = (int)hand.size();
     return;
