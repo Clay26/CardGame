@@ -21,5 +21,13 @@ int main(int argc, const char * argv[]) {
     hand.PrintHand();
     hand.Shuffle();
     hand.PrintHand();
+    War::Deck handOne(0);
+    handOne.PrintHand();
+    War::Deck handTwo(0);
+    handTwo.PrintHand();
+    hand.Deal(handOne, handTwo);
+    hand.PrintHand();
+    handOne.PrintHand();
+    handTwo.PrintHand();
     return 0;
 }

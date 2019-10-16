@@ -23,9 +23,11 @@ public:
     Deck();
     Deck(int numOfCards);
     ~Deck();
+    void Deal(Deck &handOne, Deck &handTwo);
     void PrintHand();
     void Shuffle();
     int getNumberOfCards();
+    void setHand(std::vector<War::PlayingCard> newHand);
     void setNumberOfCards(int numCards);
 
 private:

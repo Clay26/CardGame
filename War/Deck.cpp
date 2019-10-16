@@ -27,6 +27,27 @@ Deck::Deck(int numOfCards) {
 Deck::~Deck() {
 }
 
+void Deck::Deal(Deck &deckOne, Deck &deckTwo) {
+    std::vector<War::PlayingCard> handOne;
+    std::vector<War::PlayingCard> handTwo;
+    
+    for (int i = 0; i < numberOfCards; i++) {
+        if (i % 2 == 0) {
+            handOne.push_back(hand[i]);
+        }
+        else {
+            handTwo.push_back(hand[i]);
+        }
+    }
+    
+    deckOne.setHand(handOne);
+    deckTwo.setHand(handTwo);    
+    hand.clear();
+    numberOfCards = (int)hand.size();
+    
+    return;
+}
+
 void Deck::GenerateHand() {
     int suitCount = -1;
     for (int i = 0; i < numberOfCards; ++i) {
@@ -77,6 +98,13 @@ void Deck::Shuffle() {
 int Deck::getNumberOfCards() {
     return numberOfCards;
 }
+
+void Deck::setHand(std::vector<War::PlayingCard> newHand) {
+    hand = newHand;
+    numberOfCards = (int)hand.size();
+    return;
+}
+
 void Deck::setNumberOfCards(int numCards) {
     numberOfCards = numCards;
     return;
