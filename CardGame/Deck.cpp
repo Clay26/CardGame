@@ -15,55 +15,58 @@
 namespace CardGame {
 
 Deck::Deck() {
-    numberOfCards = 3;
+    numCards = 3;
     GenerateHand();
 }
 
 Deck::Deck(int numOfCards) {
-    numberOfCards = numOfCards;
+    numCards = numOfCards;
     GenerateHand();
 }
 
 Deck::~Deck() {
 }
 
-void Deck::Deal(Deck &deckOne, Deck &deckTwo, int numCardsToDeal) {
-    std::vector<CardGame::PlayingCard> handOne;
-    std::vector<CardGame::PlayingCard> handTwo;
+void Deck::AddCard(CardGame::PlayingCard cardToAdd) {
+    hand.insert(hand.begin(), cardToAdd);
+    numCards++;
     
-    for (int i = 0; i < numCardsToDeal * 2; i++) {
-        if (i % 2 == 0) {
-            handOne.insert(handOne.begin(),hand[i]);
+    return;
+}
+
+void Deck::Deal(std::vector<CardGame::Deck*> decksToDealTo, int numCardsToDeal) {
+    int numDecksToDealTo = (int)decksToDealTo.size();
+    
+    if (numDecksToDealTo * numCardsToDeal < numCards) {
+    
+        for (int i = 0; i < numCardsToDeal * numDecksToDealTo; i++) {
+            decksToDealTo[i % numDecksToDealTo]->AddCard(hand[i]);
         }
-        else {
-            handTwo.insert(handTwo.begin(),hand[i]);
-        }
-    }
-    
-    deckOne.setHand(handOne);
-    deckTwo.setHand(handTwo);
-    
-    if (numCardsToDeal * 2 < numberOfCards) {
-        hand.erase(hand.begin(), hand.begin() + numCardsToDeal * 2);
-        numberOfCards = (int)hand.size();
+        
+        hand.erase(hand.begin(), hand.begin() + numCardsToDeal * numDecksToDealTo);
+        numCards = (int)hand.size();
     }
     else {
+        
+        for (int i = 0; i < numCards; i++) {
+            decksToDealTo[i % numDecksToDealTo]->AddCard(hand[i]);
+        }
         hand.clear();
-        numberOfCards = (int)hand.size();
+        numCards = (int)hand.size();
     }
     
     return;
 }
 
-void Deck::Deal(Deck &deckOne, Deck &deckTwo) {
-    Deal(deckOne, deckTwo, numberOfCards / 2);
+void Deck::Deal(std::vector<CardGame::Deck*> decksToDealTo) {
+    Deal(decksToDealTo, numCards / decksToDealTo.size());
     
     return;
 }
 
 void Deck::GenerateHand() {
     int suitCount = -1;
-    for (int i = 0; i < numberOfCards; ++i) {
+    for (int i = 0; i < numCards; ++i) {
         PlayingCard tempCard;
         int rankCount = (i % 13) + 2;
         if (rankCount == 2) {
@@ -80,10 +83,10 @@ void Deck::GenerateHand() {
 }
 
 void Deck::PrintHand() {
-    for (int i = 0; i < numberOfCards; ++i) {
+    for (int i = 0; i < numCards; ++i) {
         PrintRank(hand[i].getRank());
         PrintSuit(hand[i].getSuit());
-        if (i < numberOfCards - 1) {
+        if (i < numCards - 1) {
             std::cout << ", ";
         }
         else {
@@ -97,7 +100,7 @@ void Deck::PrintHand() {
 void Deck::Shuffle() {
     std::vector<CardGame::PlayingCard> shuffledDeck;
     
-    for (int i = 0; i < numberOfCards; ++i) {
+    for (int i = 0; i < numCards; ++i) {
         int randomCardPos = rand() % hand.size();
         shuffledDeck.push_back(hand[randomCardPos]);
         std::vector<CardGame::PlayingCard>::iterator pos = hand.begin() + randomCardPos;
@@ -113,17 +116,17 @@ std::vector<CardGame::PlayingCard> Deck::getHand() {
 }
 
 int Deck::getNumberOfCards() {
-    return numberOfCards;
+    return numCards;
 }
 
 void Deck::setHand(std::vector<CardGame::PlayingCard> newHand) {
     hand = newHand;
-    numberOfCards = (int)hand.size();
+    numCards = (int)hand.size();
     return;
 }
 
 void Deck::setNumberOfCards(int numCards) {
-    numberOfCards = numCards;
+    numCards = numCards;
     return;
 }
 }

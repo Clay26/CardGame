@@ -23,8 +23,9 @@ public:
     Deck();
     Deck(int numOfCards);
     ~Deck();
-    void Deal(Deck &deckOne, Deck &deckTwo, int numCardsToDeal);
-    void Deal(Deck &deckOne, Deck &deckTwo);
+    void AddCard(CardGame::PlayingCard cardToAdd);
+    void Deal(std::vector<CardGame::Deck*> decksToDealTo, int numCardsToDeal);
+    void Deal(std::vector<CardGame::Deck*> decksToDealTo);
     void PrintHand();
     void Shuffle();
     std::vector<CardGame::PlayingCard> getHand();
@@ -34,7 +35,7 @@ public:
 
 private:
     std::vector<CardGame::PlayingCard> hand;
-    int numberOfCards;
+    int numCards;
     void GenerateHand();
 };
 }

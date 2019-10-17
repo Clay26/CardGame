@@ -8,6 +8,7 @@
 
 // System
 #include <iostream>
+#include <vector>
 
 // War
 #include "Deck.hpp"
@@ -25,7 +26,10 @@ int main(int argc, const char * argv[]) {
     handOne.PrintHand();
     CardGame::Deck handTwo(0);
     handTwo.PrintHand();
-    hand.Deal(handOne, handTwo, 2);
+    std::vector<CardGame::Deck*> hands;
+    hands.push_back(&handOne);
+    hands.push_back(&handTwo);
+    hand.Deal(hands, 20);
     hand.PrintHand();
     handOne.PrintHand();
     handTwo.PrintHand();
