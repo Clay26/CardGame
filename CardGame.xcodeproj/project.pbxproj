@@ -13,6 +13,7 @@
 		C85DF09323541D650049FD58 /* Suits.hpp in Sources */ = {isa = PBXBuildFile; fileRef = C85DF09223541D650049FD58 /* Suits.hpp */; };
 		C85DF0952354DFE50049FD58 /* Suits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C85DF0942354DFE50049FD58 /* Suits.cpp */; };
 		C85DF09823551C3C0049FD58 /* Ranks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C85DF09623551C3C0049FD58 /* Ranks.cpp */; };
+		C897115F2357E93500EB1C37 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C897115D2357E93500EB1C37 /* Player.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +39,8 @@
 		C85DF0942354DFE50049FD58 /* Suits.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Suits.cpp; sourceTree = "<group>"; };
 		C85DF09623551C3C0049FD58 /* Ranks.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Ranks.cpp; sourceTree = "<group>"; };
 		C85DF09723551C3C0049FD58 /* Ranks.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Ranks.hpp; sourceTree = "<group>"; };
+		C897115D2357E93500EB1C37 /* Player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		C897115E2357E93500EB1C37 /* Player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				C85DF08523540C210049FD58 /* main.cpp */,
+				C897115D2357E93500EB1C37 /* Player.cpp */,
+				C897115E2357E93500EB1C37 /* Player.hpp */,
 				C85DF08C23540E8E0049FD58 /* PlayingCard.cpp */,
 				C85DF08D23540E8E0049FD58 /* PlayingCard.hpp */,
 				C85DF08F235418680049FD58 /* Deck.cpp */,
@@ -142,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C85DF091235418680049FD58 /* Deck.cpp in Sources */,
+				C897115F2357E93500EB1C37 /* Player.cpp in Sources */,
 				C85DF08E23540E8E0049FD58 /* PlayingCard.cpp in Sources */,
 				C85DF09323541D650049FD58 /* Suits.hpp in Sources */,
 				C85DF08623540C210049FD58 /* main.cpp in Sources */,

@@ -12,6 +12,7 @@
 
 // War
 #include "Deck.hpp"
+#include "Player.hpp"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -33,5 +34,12 @@ int main(int argc, const char * argv[]) {
     hand.PrintHand();
     handOne.PrintHand();
     handTwo.PrintHand();
+    
+    CardGame::Player player1;
+    CardGame::PlayingCard cardTest;
+    card.setSuit('C');
+    card.setRank(13);
+    player1.playersCards.AddCard(card);
+    player1.playersCards.PrintHand();
     return 0;
 }
