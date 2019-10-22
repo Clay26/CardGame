@@ -15,58 +15,54 @@
 namespace CardGame {
 
 Deck::Deck() {
-    numCards = 3;
-    GenerateHand();
+    GenerateHand(3);
 }
 
 Deck::Deck(int numOfCards) {
-    numCards = numOfCards;
-    GenerateHand();
+    GenerateHand(numOfCards);
 }
 
 Deck::~Deck() {
 }
 
 void Deck::AddCard(CardGame::PlayingCard cardToAdd) {
-    hand.insert(hand.begin(), cardToAdd);
-    numCards++;
-    
+    this->hand.insert(this->hand.begin(), cardToAdd);
     return;
 }
 
-void Deck::Deal(std::vector<CardGame::Deck*> decksToDealTo, int numCardsToDeal) {
-    int numDecksToDealTo = (int)decksToDealTo.size();
+void Deck::Deal(std::vector<CardGame::Deck*> decksToDealTo, unsigned long numCardsToDeal) {
+    unsigned long numDecksToDealTo = decksToDealTo.size();
+    unsigned long numCards = this->getNumberOfCards();
     
     if (numDecksToDealTo * numCardsToDeal < numCards) {
     
         for (int i = 0; i < numCardsToDeal * numDecksToDealTo; i++) {
-            decksToDealTo[i % numDecksToDealTo]->AddCard(hand[i]);
+            decksToDealTo[i % numDecksToDealTo]->AddCard(this->hand[i]);
         }
         
-        hand.erase(hand.begin(), hand.begin() + numCardsToDeal * numDecksToDealTo);
-        numCards = (int)hand.size();
+        this->hand.erase(this->hand.begin(), this->hand.begin() + numCardsToDeal * numDecksToDealTo);
     }
     else {
         
         for (int i = 0; i < numCards; i++) {
-            decksToDealTo[i % numDecksToDealTo]->AddCard(hand[i]);
+            decksToDealTo[i % numDecksToDealTo]->AddCard(this->hand[i]);
         }
-        hand.clear();
-        numCards = (int)hand.size();
+        this->hand.clear();
     }
     
     return;
 }
 
 void Deck::Deal(std::vector<CardGame::Deck*> decksToDealTo) {
-    Deal(decksToDealTo, numCards / decksToDealTo.size());
+    Deal(decksToDealTo, this->getNumberOfCards() / decksToDealTo.size());
     
     return;
 }
 
-void Deck::GenerateHand() {
+void Deck::GenerateHand(unsigned long numOfCards) {
     int suitCount = -1;
-    for (int i = 0; i < numCards; ++i) {
+    
+    for (int i = 0; i < numOfCards; ++i) {
         PlayingCard tempCard;
         int rankCount = (i % 13) + 2;
         if (rankCount == 2) {
@@ -76,16 +72,18 @@ void Deck::GenerateHand() {
         
         tempCard.setRank(rankCount);
         tempCard.setSuit(suitCount);
-        hand.push_back(tempCard);
+        this->hand.push_back(tempCard);
     }
     
     return;
 }
 
 void Deck::PrintHand() {
+    unsigned long numCards = this->getNumberOfCards();
+    
     for (int i = 0; i < numCards; ++i) {
-        PrintRank(hand[i].getRank());
-        PrintSuit(hand[i].getSuit());
+        PrintRank(this->hand[i].getRank());
+        PrintSuit(this->hand[i].getSuit());
         if (i < numCards - 1) {
             std::cout << ", ";
         }
@@ -99,34 +97,29 @@ void Deck::PrintHand() {
 
 void Deck::Shuffle() {
     std::vector<CardGame::PlayingCard> shuffledDeck;
+    unsigned long numCards = this->getNumberOfCards();
     
     for (int i = 0; i < numCards; ++i) {
-        int randomCardPos = rand() % hand.size();
-        shuffledDeck.push_back(hand[randomCardPos]);
-        std::vector<CardGame::PlayingCard>::iterator pos = hand.begin() + randomCardPos;
-        hand.erase(pos);
+        int randomCardPos = rand() % this->getNumberOfCards();
+        shuffledDeck.push_back(this->hand[randomCardPos]);
+        std::vector<CardGame::PlayingCard>::iterator pos = this->hand.begin() + randomCardPos;
+        this->hand.erase(pos);
     }
     
-    hand = shuffledDeck;
+    this->hand = shuffledDeck;
     return;
 }
 
 std::vector<CardGame::PlayingCard> Deck::getHand() {
-    return hand;
+    return this->hand;
 }
 
-int Deck::getNumberOfCards() {
-    return numCards;
+unsigned long Deck::getNumberOfCards() {
+    return this->hand.size();
 }
 
 void Deck::setHand(std::vector<CardGame::PlayingCard> newHand) {
-    hand = newHand;
-    numCards = (int)hand.size();
-    return;
-}
-
-void Deck::setNumberOfCards(int numCards) {
-    numCards = numCards;
+    this->hand = newHand;
     return;
 }
 }

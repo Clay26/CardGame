@@ -30,17 +30,17 @@ char PlayingCard::getSuit() {
 }
 
 void PlayingCard::setRank(int newRank) {
-    rank = ConvertIntToRanks(newRank);
+    this->rank = ConvertIntToRanks(newRank);
     return;
 }
 
 void PlayingCard::setSuit(char newSuit) {
-    suit = ConvertCharToSuits(newSuit);
+    this->suit = ConvertCharToSuits(newSuit);
     return;
 }
 
 void PlayingCard::setSuit(int newSuit) {
-    suit = ConvertIntToSuits(newSuit);
+    this->suit = ConvertIntToSuits(newSuit);
     return;
 }
 }

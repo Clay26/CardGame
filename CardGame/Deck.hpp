@@ -24,19 +24,17 @@ public:
     Deck(int numOfCards);
     ~Deck();
     void AddCard(CardGame::PlayingCard cardToAdd);
-    void Deal(std::vector<CardGame::Deck*> decksToDealTo, int numCardsToDeal);
+    void Deal(std::vector<CardGame::Deck*> decksToDealTo, unsigned long numCardsToDeal);
     void Deal(std::vector<CardGame::Deck*> decksToDealTo);
     void PrintHand();
     void Shuffle();
     std::vector<CardGame::PlayingCard> getHand();
-    int getNumberOfCards();
+    unsigned long getNumberOfCards();
     void setHand(std::vector<CardGame::PlayingCard> newHand);
-    void setNumberOfCards(int numCards);
 
 private:
     std::vector<CardGame::PlayingCard> hand;
-    int numCards;
-    void GenerateHand();
+    void GenerateHand(unsigned long numOfCards);
 };
 }
 #endif /* Deck_hpp */
