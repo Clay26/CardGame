@@ -39,7 +39,7 @@ int main(int argc, const char * argv[]) {
     CardGame::PlayingCard cardTest;
     card.setSuit('C');
     card.setRank(13);
-    player1.playersCards.AddCard(card);
-    player1.playersCards.PrintHand();
+    player1.AddCardToHand(card);
+    player1.getPlayersHand().PrintHand();
     return 0;
 }
