@@ -14,6 +14,8 @@
 		C85DF0952354DFE50049FD58 /* Suits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C85DF0942354DFE50049FD58 /* Suits.cpp */; };
 		C85DF09823551C3C0049FD58 /* Ranks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C85DF09623551C3C0049FD58 /* Ranks.cpp */; };
 		C897115F2357E93500EB1C37 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C897115D2357E93500EB1C37 /* Player.cpp */; };
+		C89711722361475E00EB1C37 /* CardGame.h in Headers */ = {isa = PBXBuildFile; fileRef = C89711712361475E00EB1C37 /* CardGame.h */; };
+		C89711742361475E00EB1C37 /* CardGame.m in Sources */ = {isa = PBXBuildFile; fileRef = C89711732361475E00EB1C37 /* CardGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,10 +43,20 @@
 		C85DF09723551C3C0049FD58 /* Ranks.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Ranks.hpp; sourceTree = "<group>"; };
 		C897115D2357E93500EB1C37 /* Player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
 		C897115E2357E93500EB1C37 /* Player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
+		C897116F2361475E00EB1C37 /* libCardGame.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libCardGame.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		C89711712361475E00EB1C37 /* CardGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardGame.h; sourceTree = "<group>"; };
+		C89711732361475E00EB1C37 /* CardGame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C85DF07F23540C210049FD58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C897116D2361475E00EB1C37 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				C85DF08423540C210049FD58 /* CardGame */,
+				C89711702361475E00EB1C37 /* CardGame */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				C85DF08223540C210049FD58 /* War */,
+				C897116F2361475E00EB1C37 /* libCardGame.dylib */,
 			);
 			name = Products;
 			path = ..;
@@ -89,7 +103,27 @@
 			path = CardGame;
 			sourceTree = "<group>";
 		};
+		C89711702361475E00EB1C37 /* CardGame */ = {
+			isa = PBXGroup;
+			children = (
+				C89711712361475E00EB1C37 /* CardGame.h */,
+				C89711732361475E00EB1C37 /* CardGame.m */,
+			);
+			path = CardGame;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C897116B2361475E00EB1C37 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C89711722361475E00EB1C37 /* CardGame.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		C85DF08123540C210049FD58 /* War */ = {
@@ -109,6 +143,23 @@
 			productReference = C85DF08223540C210049FD58 /* War */;
 			productType = "com.apple.product-type.tool";
 		};
+		C897116E2361475E00EB1C37 /* CardGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C89711772361475E00EB1C37 /* Build configuration list for PBXNativeTarget "CardGame" */;
+			buildPhases = (
+				C897116B2361475E00EB1C37 /* Headers */,
+				C897116C2361475E00EB1C37 /* Sources */,
+				C897116D2361475E00EB1C37 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CardGame;
+			productName = CardGame;
+			productReference = C897116F2361475E00EB1C37 /* libCardGame.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -119,6 +170,9 @@
 				ORGANIZATIONNAME = "Clay Jackson";
 				TargetAttributes = {
 					C85DF08123540C210049FD58 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					C897116E2361475E00EB1C37 = {
 						CreatedOnToolsVersion = 11.1;
 					};
 				};
@@ -137,6 +191,7 @@
 			projectRoot = "";
 			targets = (
 				C85DF08123540C210049FD58 /* War */,
+				C897116E2361475E00EB1C37 /* CardGame */,
 			);
 		};
 /* End PBXProject section */
@@ -153,6 +208,14 @@
 				C85DF08623540C210049FD58 /* main.cpp in Sources */,
 				C85DF0952354DFE50049FD58 /* Suits.cpp in Sources */,
 				C85DF09823551C3C0049FD58 /* Ranks.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C897116C2361475E00EB1C37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C89711742361475E00EB1C37 /* CardGame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +351,32 @@
 			};
 			name = Release;
 		};
+		C89711752361475E00EB1C37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K7V8GTEUH6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C89711762361475E00EB1C37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K7V8GTEUH6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -305,6 +394,15 @@
 			buildConfigurations = (
 				C85DF08A23540C210049FD58 /* Debug */,
 				C85DF08B23540C210049FD58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C89711772361475E00EB1C37 /* Build configuration list for PBXNativeTarget "CardGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C89711752361475E00EB1C37 /* Debug */,
+				C89711762361475E00EB1C37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
