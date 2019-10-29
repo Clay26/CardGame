@@ -57,6 +57,7 @@
 		C85DF07923540C210049FD58 = {
 			isa = PBXGroup;
 			children = (
+				C8690B8D2367C8D100486D64 /* WarGame */,
 				C85DF08423540C210049FD58 /* CardGame */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +74,6 @@
 		C85DF08423540C210049FD58 /* CardGame */ = {
 			isa = PBXGroup;
 			children = (
-				C85DF08523540C210049FD58 /* main.cpp */,
 				C897115D2357E93500EB1C37 /* Player.cpp */,
 				C897115E2357E93500EB1C37 /* Player.hpp */,
 				C85DF08C23540E8E0049FD58 /* PlayingCard.cpp */,
@@ -87,6 +87,14 @@
 				C85DF08323540C210049FD58 /* Products */,
 			);
 			path = CardGame;
+			sourceTree = "<group>";
+		};
+		C8690B8D2367C8D100486D64 /* WarGame */ = {
+			isa = PBXGroup;
+			children = (
+				C85DF08523540C210049FD58 /* main.cpp */,
+			);
+			path = WarGame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
